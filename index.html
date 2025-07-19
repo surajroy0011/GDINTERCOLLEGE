@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>G.D INTER COLLEGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body { background:#f5f7fa; font-family: 'Segoe UI',Arial,sans-serif; color:#222; margin:0 }
+    header { background:#003366; color:#fff; padding:32px 0 18px 0; text-align:center; }
+    nav a { color:#fff; margin:0 18px; text-decoration:none; font-weight:500 }
+    nav a:hover { color:#ffcc00 }
+    main { max-width:900px; margin:34px auto; background:#fff; border-radius:7px; padding:32px 28px; box-shadow:0 5px 16px #0002 }
+    h1 { margin-top:0; margin-bottom:10px; font-size:2.4rem;}
+    h2 { color:#003366;}
+    section { margin-bottom:34px; }
+    table { width:100%; border-collapse: collapse; margin-top:12px;}
+    th, td { border-bottom:1px solid #e3eaf3; padding:8px 7px; }
+    th { background:#e4eef8; }
+    .admin-block { background:#ecf4ff; border-left:6px solid #003366; padding:11px 17px; margin-bottom:18px; border-radius:5px;}
+    .review-table {border-radius:5px; box-shadow:0 1px 6px #0001;}
+    footer { margin-top:48px; padding:16px 0 12px; background:#003366; color:#fff; text-align:center;}
+    .credit { font-family: "Courier New", monospace; font-size:1rem; color: #ffe06f; font-style: italic; }
+    @media (max-width:700px) {
+      main { padding:8px 2vw; }
+      nav a { display:block; margin:6px 0; }
+    }
+    [contenteditable="true"] { outline:2px dashed #ffde59; background:#fff8dc;}
+    button.edit-btn {background:#003366;color:white;border:none;padding:4px 13px;border-radius:5px;margin-left:9px;cursor:pointer;font-size:.95em;}
+    button.edit-btn:hover{background:#ffcc00;color:#003366;}
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function enableEdit(id, btn) {
+      var el = document.getElementById(id);
+      if(el.contentEditable !== "true") {
+        el.contentEditable = "true";
+        btn.innerText = "Save";
+        el.style.background = "#fffbec";
+        el.focus();
+      } else {
+        el.contentEditable = "false";
+        btn.innerText = "✏️ Edit";
+        el.style.background = "";
+      }
+    }
+
+    window.onload = function() {
+      var ctx = document.getElementById('academicChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['2021','2022','2023'],
+          datasets: [
+            {label:'Pass %', data:[96,97,98], borderColor:'#003366',backgroundColor:'rgba(0,51,102,0.07)', fill:true, tension:0.32},
+            {label:'Avg. Marks', data:[78,80,83], borderColor:'#ffcc00',backgroundColor:'rgba(255,204,0,0.12)', fill:true, tension:0.32},
+            {label:'Merit Students', data:[30,33,37], borderColor:'#009944', backgroundColor:'rgba(0,153,68,0.08)', fill:true, tension:0.32}
+          ]
+        },
+        options: {
+          responsive:true,
+          scales:{y:{beginAtZero:true}},
+          plugins:{legend:{position:'top'},title:{display:true,text:'Academic Performance Trends (2021-2023)'}}
+        }
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>G.D INTER COLLEGE</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#academics">Academics</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#news">News & Events</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>About G.D INTER COLLEGE
+        <button class="edit-btn" onclick="enableEdit('about-content',this)">✏️ Edit</button>
+      </h2>
+      <div id="about-content">
+        <div class="admin-block">
+          <p><strong>Director:</strong> Gaurav Rai</p>
+          <p><strong>Principal:</strong> Rani Rai</p>
+        </div>
+        <p>G.D INTER COLLEGE is a premier institution dedicated to nurturing academic excellence, holistic development, and ethical leadership. Our mission is to impart quality education through modern teaching methods, state-of-the-art infrastructure, and a culturally vibrant campus environment.</p>
+        <ul>
+          <li>Renowned for academic achievement and dedicated faculty.</li>
+          <li>Modern labs, digital classrooms, and extensive library resources.</li>
+          <li>Emphasis on extracurricular activities including sports and cultural events.</li>
+          <li>Strong focus on leadership, innovation, and community service.</li>
+          <li>Supportive and inclusive environment encouraging student growth.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="academics">
+      <h2>Student Academic Performance
+        <button class="edit-btn" onclick="enableEdit('academics-content',this)">✏️ Edit</button>
+      </h2>
+      <div id="academics-content">
+        <p>Our students consistently excel in annual exams, with a rising trend in pass percentages and merit holders year after year.</p>
+        <table>
+          <thead>
+           <tr><th>Year</th><th>Pass %</th><th>Average Marks</th><th>Merit Students</th></tr>
+          </thead>
+          <tbody>
+           <tr><td>2021</td><td>96%</td><td>78%</td><td>30</td></tr>
+           <tr><td>2022</td><td>97%</td><td>80%</td><td>33</td></tr>
+           <tr><td>2023</td><td>98%</td><td>83%</td><td>37</td></tr>
+          </tbody>
+        </table>
+        <canvas id="academicChart" height="220" style="margin-top:27px"></canvas>
+      </div>
+    </section>
+
+    <section id="reviews">
+      <h2>Student Reviews & Testimonials
+        <button class="edit-btn" onclick="enableEdit('reviews-content',this)">✏️ Edit</button>
+      </h2>
+      <div id="reviews-content" class="review-table">
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Review</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Anjali Sharma</td><td>Excellent faculty and supportive environment.</td></tr>
+            <tr><td>Rahul Verma</td><td>The college has helped me grow academically and personally.</td></tr>
+            <tr><td>Pooja Singh</td><td>Great infrastructure and learning resources.</td></tr>
+            <tr><td>Aditya Kumar</td><td>Teachers are very approachable and helpful.</td></tr>
+            <tr><td>Neha Gupta</td><td>Sports and cultural activities are well organized.</td></tr>
+            <tr><td>Rohan Yadav</td><td>I appreciate the career guidance and placement assistance.</td></tr>
+            <tr><td>Sakshi Mishra</td><td>The campus life is vibrant and inclusive.</td></tr>
+            <tr><td>Vivek Patel</td><td>A perfect place to nurture talents and skills.</td></tr>
+            <tr><td>Simran Kaur</td><td>Management is transparent and always available for students.</td></tr>
+            <tr><td>Amit Joshi</td><td>I am proud to be a student of G.D INTER COLLEGE.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="news">
+      <h2>News & Events
+        <button class="edit-btn" onclick="enableEdit('news-content',this)">✏️ Edit</button>
+      </h2>
+      <div id="news-content">
+        <ul>
+          <li>Recent cultural fest celebrated with enthusiastic student participation.</li>
+          <li>Science exhibition and inter-college quiz competitions.</li>
+          <li>Sports week with athletics, cricket, and football tournaments.</li>
+          <li>Annual scholarship award ceremony.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us
+        <button class="edit-btn" onclick="enableEdit('contact-content',this)">✏️ Edit</button>
+      </h2>
+      <div id="contact-content">
+        <ul>
+          <li><strong>Address:</strong> 123 College Road, Cityname, State, ZIP</li>
+          <li><strong>Phone:</strong> +91 12345 67890</li>
+          <li><strong>Email:</strong> info@gdintercollege.edu</li>
+        </ul>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" placeholder="Your name" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" placeholder="Your email" required style="width: 100%; padding: 8px; margin-bottom: 10px;"><br>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" placeholder="Write your message here" required style="width: 100%; padding: 8px; height: 100px;"></textarea><br>
+          <button type="submit" style="background:#003366;color:white;padding:9px 23px;border:none;border-radius:5px;cursor:pointer;">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="credit">
+      Website designed and made by <strong>Suraj Roy</strong><br>
+      Domain: <a href="https://yourusername.github.io/gdintercollege/" style="color:#ffe06f;text-decoration:underline;" target="_blank">yourusername.github.io/gdintercollege/</a>
+    </div>
+    <div style="color:#fffaf0;margin-top:6px;">&copy; 2025 G.D INTER COLLEGE. All rights reserved.</div>
+  </footer>
+</body>
+</html>
+

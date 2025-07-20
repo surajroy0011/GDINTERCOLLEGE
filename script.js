@@ -25,11 +25,11 @@ window.onload = displayMoral;
 
 // Carousel for Gallery
 const galleryImages = [
-  {src: "gallery1.jpg", caption: "Annual Function 2023"},
-  {src: "gallery2.jpg", caption: "Science Exhibition"},
-  {src: "gallery3.jpg", caption: "Sports Meet"},
-  {src: "gallery4.jpg", caption: "Classroom Activities"},
-  {src: "gallery5.jpg", caption: "College Campus"}
+  {src: "gallery1.jpg", caption: "C.M Yogi Ji Visit"},
+  {src: "gallery2.jpg", caption: "Result-2024"},
+  {src: "gallery3.jpg", caption: "Independence day"},
+  {src: "gallery4.jpg", caption: "Activities"},
+  {src: "gallery5.jpg", caption: "Result-2025"}
 ];
 let carouselIdx = 0;
 function updateCarousel() {

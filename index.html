@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>G.D. Inter College | Unimaginable Excellence</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="logo.png">
+</head>
+<body>
+  <div id="top-banner">
+    <img src="logo.png" alt="GDIC Logo">
+    <h1>G.D. Inter College</h1>
+    <p class="college-motto">Empowering Minds, Uplifting Society</p>
+  </div>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="#home">🏡 Home</a></li>
+      <li><a href="#results">🏅 Results</a></li>
+      <li><a href="#gallery">🖼️ Gallery</a></li>
+      <li><a href="#about">ℹ️ About</a></li>
+      <li><a href="#moral">💡 Moral Thoughts</a></li>
+      <li><a href="#contact">📞 Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero-section" id="home">
+    <div class="hero-content">
+      <div class="hero-text-group">
+        <h2>Welcome to the Future of Learning</h2>
+        <p>At <strong>G.D. Inter College</strong>, our commitment is to excellence, innovation, and ethical growth.</p>
+      </div>
+      <img src="campus-main.jpg" class="hero-image" alt="College Campus">
+    </div>
+    <button class="cta-btn" onclick="showNotice()">🎓 Latest Admission Notice</button>
+  </header>
+
+  <section class="carousel" id="gallery">
+    <h2>College Gallery</h2>
+    <div class="carousel-container">
+      <button class="carousel-arrow left" onclick="changeImage(-1)">&#8592;</button>
+      <img id="carousel-img" src="gallery1.jpg" alt="Gallery Item">
+      <button class="carousel-arrow right" onclick="changeImage(1)">&#8594;</button>
+    </div>
+    <p id="carousel-caption">Annual Function 2023</p>
+  </section>
+
+  <section class="results-section" id="results">
+    <h2>🏅 Class Toppers (2023-25)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Roll No</th>
+          <th>Class</th>
+          <th>Marks (%)</th>
+          <th>Remark</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Akash Roy</td>
+          <td>1201</td>
+          <td>10th (Sci)</td>
+          <td>91.5</td>
+          <td>
+            <span class="remark distinction">Distinction</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Anand Yadav</td>
+          <td>1149</td>
+          <td>10th</td>
+          <td>96.5</td>
+          <td>
+            <span class="remark excellence">Excellent</span>
+          </td>
+        </tr>
+        <tr>
+          <td>Shivangi Rai</td>
+          <td>1210</td>
+          <td>12th </td>
+          <td>94.0</td>
+          <td>
+            <span class="remark merit">Merit</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="moral-section" id="moral">
+    <h2>💡 Moral Thought of the Moment</h2>
+    <blockquote id="moral-thought"></blockquote>
+    <button class="shuffle-btn" onclick="nextMoral()">Next Thought</button>
+  </section>
+
+  <section class="director-message">
+    <h2>From the Director's Desk</h2>
+    <div class="director-card">
+      <img src="director.jpg" alt="Director of G.D. Inter College">
+      <div>
+        <h3>Dr. S.K. Sharma</h3>
+        <p>
+          “We envision G.D. Inter College as a beacon of knowledge, ethics, and academic brilliance. Together, let's nurture empowered leaders for tomorrow.”
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <h2>About Us</h2>
+    <div class="about-columns">
+      <p>
+        <b>Founded:</b> 2005<br>
+        <b>Location:</b> Dighwa Bazar, Bansgaon Road, Kauriram, Gorakhpur, Uttar Pradesh-273413
+      </p>
+      <p>
+        <b>Vision:</b> Inclusive education for all<br>
+        <b>Mission:</b> Excellence, Integrity, Innovation, Service
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-columns">
+      <div>
+        <b>Address:</b><br>Dighwa Bazar, Bansgaon Road, Kauriram, Gorakhpur, Uttar Pradesh-273413
+      </div>
+      <div>
+        <b>Phone:</b><br>
+        +91 7905753067<br>
+        +91 99891151435<br>
+        +91 8112843447
+      </div>
+      <div>
+        <b>Email:</b><br>
+        officegdic2005@gmail.com<br>
+        gdpublic.edu@gmail.com
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-main">
+      &copy; 2025 G.D. Inter College. All rights reserved.<br>
+      <span class="designer-credit">Web design and developed by Suraj Roy</span>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

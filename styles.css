@@ -406,3 +406,31 @@ button, .cta-btn, .shuffle-btn {
   display: block;
   font-size: 1.1em;
 }
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.fa {
+  padding: 12px;
+  font-size: 22px;
+  text-align: center;
+  width: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+  margin: 0 2px;
+  transition: transform 0.2s, background 0.2s;
+  background: #f1f1f1;
+  color: #333;
+}
+
+.fa-facebook { background: #3b5998; color: white; }
+.fa-instagram { background: #e1306c; color: white; }
+.fa-google { background: #4285F4; color: white; }
+
+.fa:hover {
+  opacity: 0.93;
+  transform: scale(1.10);
+}

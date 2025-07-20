@@ -45,7 +45,12 @@
     </div>
     <p id="carousel-caption">College Function 2023</p>
   </section>
-
+ 
+  <section id="events">
+  <h2>Upcoming Festivals</h2>
+  <div id="events-list"></div>
+  </section>
+  
   <section class="results-section" id="results">
     <h2>🏅 Class Toppers (2023-25)</h2>
     <table>
@@ -142,12 +147,6 @@
       </div>
     </div>
   </section>
- 
-  <section id="events">
-  <h2>Upcoming Festivals</h2>
-  <div id="events-list"></div>
-  </section>
-  
 
  <footer>
     <div class="footer-main">
@@ -156,5 +155,28 @@
     </div>
   </footer>
   <script src="script.js"></script>
+<script>
+  const events = [
+    { title: "Republic Day",     date: "January 26",   description: "Celebrates the adoption of the Constitution of India." },
+    { title: "Independence Day", date: "August 15",    description: "Marks India's independence from British rule." },
+    { title: "Teachers' Day",    date: "September 5",  description: "Honors Dr. Sarvepalli Radhakrishnan's birthday." },
+    { title: "Children's Day",   date: "November 14",  description: "Celebrates childhood and Nehru's birthday." }
+  ];
+
+  const eventsList = document.getElementById('events-list');
+  events.forEach(event => {
+    const eventDiv = document.createElement('div');
+    eventDiv.className = 'event-card';
+    eventDiv.innerHTML = `
+      <h3>${event.title}</h3>
+      <p><strong>Date:</strong> ${event.date}</p>
+      <p>${event.description}</p>
+    `;
+    eventsList.appendChild(eventDiv);
+  });
+</script>
+</body>
+</html>
+
 </body>
 </html>

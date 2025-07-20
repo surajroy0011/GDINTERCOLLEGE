@@ -26,10 +26,10 @@ window.onload = displayMoral;
 // Carousel for Gallery
 const galleryImages = [
   {src: "gallery1.jpeg", caption: "C.M Yogi Ji Visit"},
-  {src: "gallery2.jpeg", caption: "Result-2024"},
-  {src: "gallery3.jpeg", caption: "Independence day"},
-  {src: "gallery4.jpeg", caption: "Activities"},
-  {src: "gallery5.jpeg", caption: "Result-2025"}
+  {src: "gallery2.jpg", caption: "Result-2024"},
+  {src: "gallery3.jpg", caption: "Independence day"},
+  {src: "gallery4.jpg", caption: "Activities"},
+  {src: "gallery5.jpg", caption: "Result-2025"}
 ];
 let carouselIdx = 0;
 function updateCarousel() {

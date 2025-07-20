@@ -434,3 +434,30 @@ button, .cta-btn, .shuffle-btn {
   opacity: 0.93;
   transform: scale(1.10);
 }
+.edu-links {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f6f9fd;
+  border-radius: 8px;
+}
+.edu-links h2 {
+  margin-top: 0;
+  font-size: 1.18em;
+  font-weight: bold;
+  color: #234897;
+}
+.edu-links ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.edu-links li {
+  margin: 7px 0;
+}
+.edu-links a {
+  color: #1152c1;
+  text-decoration: none;
+}
+.edu-links a:hover {
+  color: #e1306c;
+  text-decoration: underline;
+}

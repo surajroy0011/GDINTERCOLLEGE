@@ -309,3 +309,100 @@ footer {
   .about-columns, .contact-columns, .director-card { flex-direction: column; gap: 0.8rem; }
   .about-section, .director-message, .results-section, .contact-section, .moral-section { padding: 1rem 0.5rem; }
 }
+/* Make sure box sizing is consistent */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Make images and containers responsive */
+img, .hero-image, .director-card img, #top-banner img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Make tables responsive on mobile */
+@media (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+      display: block;
+      width: 100%;
+  }
+  thead tr { display: none; }
+  td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+      text-align: left;
+  }
+  td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+  }
+}
+
+/* Responsive layout for navigation and sections */
+@media (max-width: 700px) {
+  .navbar ul {
+      flex-direction: column !important;
+      padding: 0;
+  }
+  .about-columns,
+  .contact-columns,
+  .director-card,
+  .hero-content {
+      flex-direction: column !important;
+      display: flex !important;
+      align-items: stretch;
+  }
+  .hero-image {
+      margin: 0 auto 10px auto;
+      width: 100%;
+  }
+  .hero-text-group {
+      text-align: center;
+  }
+  .carousel-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .carousel-arrow {
+      margin: 5px 0;
+      width: 100%;
+      max-width: 200px;
+  }
+  .results-section table {
+      font-size: 1em;
+  }
+  body, html {
+      padding: 0;
+      margin: 0;
+  }
+}
+
+/* Give containers some padding */
+.container, .about-columns, .contact-columns {
+  padding: 10px;
+}
+
+/* Ensure footer is readable */
+footer {
+  font-size: 1em;
+  text-align: center;
+  padding: 12px 8px;
+}
+
+/* Prevent horizontal scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Optional: Increase touch target for buttons */
+button, .cta-btn, .shuffle-btn {
+  width: 90%;
+  max-width: 400px;
+  margin: 8px auto;
+  display: block;
+  font-size: 1.1em;
+}

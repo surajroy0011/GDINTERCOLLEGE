@@ -48,3 +48,18 @@ window.addEventListener('DOMContentLoaded', updateCarousel);
 function showNotice() {
   alert("Admissions open for 2025-26! Visit the college office or contact us for details.");
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const backBtn = document.getElementById('gdicBackToTop');
+  if (backBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 240) {
+        backBtn.style.display = 'block';
+      } else {
+        backBtn.style.display = 'none';
+      }
+    });
+    backBtn.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: "smooth"});
+    });
+  }
+});

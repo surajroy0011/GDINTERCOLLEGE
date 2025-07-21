@@ -461,3 +461,14 @@ button, .cta-btn, .shuffle-btn {
   color: #e1306c;
   text-decoration: underline;
 }
+.glass-card {
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+  backdrop-filter: blur(8px);
+  border-radius: 1.6rem;
+  border: 1.5px solid rgba(255,255,255,0.24);
+  padding: 2rem 1.3rem;
+  margin: 1.5rem;
+  text-align: center;
+  color: #202147;
+}
